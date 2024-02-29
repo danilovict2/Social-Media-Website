@@ -19,6 +19,6 @@ class UserEntityListener
 
     public function prePersist(User $user, LifecycleEventArgs $event)
     {
-        $user->setUsername($this->slugger->slug($user->getName()));
+        $user->setUsername($this->slugger->slug($user->getName(), '_'));
     }
 }

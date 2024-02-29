@@ -13,7 +13,9 @@
 	</head>
 	<body class="font-sans antialiased bg-gray-100 lg:overflow-hidden lg:h-full">
 		<div class="h-full overflow-hidden flex flex-col bg-gray-100 dark:bg-gray-900">
-			<div {{ vue_component('Navbar') }}></div>
+			{% if is_granted("ROLE_USER") %}
+				<div {{ vue_component('Navbar', {username: app.user.username, email: app.user.email}) }}></div>
+			{% endif %}
 
 			<main class="flex-1 overflow-hidden"> 
 				{% block body %}{% endblock %}
