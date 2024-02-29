@@ -12,15 +12,13 @@
 
 	</head>
 	<body class="font-sans antialiased bg-gray-100 lg:overflow-hidden lg:h-full">
-		{% if is_granted("ROLE_USER") %}
-			<div class="h-full overflow-hidden flex flex-col bg-gray-100 dark:bg-gray-900">
-				<div {{ vue_component('Navbar') }}></div>
+		<div class="h-full overflow-hidden flex flex-col bg-gray-100 dark:bg-gray-900">
+			<div {{ vue_component('Navbar') }}></div>
 
-				<main class="flex-1 overflow-hidden"> 
-                    {% block body %}{% endblock %}
-				</main>
-			</div>
-		{% endif %}
+			<main class="flex-1 overflow-hidden"> 
+				{% block body %}{% endblock %}
+			</main>
+		</div>
 
 
 		{% block javascripts %}
