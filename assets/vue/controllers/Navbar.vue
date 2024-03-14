@@ -32,7 +32,7 @@
                             </template>
 
                             <template #content>
-                                <DropdownLink :href="'#'"> Profile</DropdownLink>
+                                <DropdownLink :href="'/u/' + username"> Profile</DropdownLink>
                                 <DropdownLink :href="'/logout'" method="post" as="button">
                                     Log Out
                                 </DropdownLink>
@@ -75,7 +75,7 @@
                 </div>
 
                 <div class="mt-3 space-y-1">
-                    <ResponsiveNavLink :href="'#'"> Profile</ResponsiveNavLink>
+                    <ResponsiveNavLink :href="'/u/' + username"> Profile</ResponsiveNavLink>
                     <ResponsiveNavLink :href="'/logout'" method="post" as="button">
                         Log Out
                     </ResponsiveNavLink>
