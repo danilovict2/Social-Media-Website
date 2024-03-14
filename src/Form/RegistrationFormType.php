@@ -17,7 +17,9 @@ class RegistrationFormType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('email', EmailType::class)
+            ->add('email', EmailType::class, [
+                'error_bubbling' => true
+            ])
             ->add('plainPassword', PasswordType::class, [
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
@@ -34,6 +36,7 @@ class RegistrationFormType extends AbstractType
                         'max' => 4096,
                     ]),
                 ],
+                'error_bubbling' => true
             ])
         ;
     }
