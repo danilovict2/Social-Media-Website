@@ -1,5 +1,5 @@
 <template>
-    <div class="w-[768px] mx-auto h-full overflow-auto">
+    <div class="w-[768px] mx-auto h-[90vh] overflow-auto">
         <div class="relative bg-white">
             <img src="https://www.prodraw.net/fb_cover/images/fb_cover_65.jpg" class="w-full h-[200px] object-cover">
             <div class="flex ">
